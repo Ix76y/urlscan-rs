@@ -12,3 +12,8 @@ edition = "2021"
 
 
 [dependencies]
+
+
+[lib]
+name = "urlscan"
+path = "src/lib.rs"
