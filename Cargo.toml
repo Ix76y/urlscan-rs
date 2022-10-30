@@ -1,0 +1,14 @@
+[package]
+name = "urlscan"
+version = "0.1.0"
+authors = ["Ix76y"]
+description = "URLScan.io API"
+keywords = ["urlscan", "api"]
+categories = ["api-bindings"]
+repository = "https://github.com/Ix76y/urlscan-rs"
+readme = "README.md"
+license-file = "LICENSE"
+edition = "2021"
+
+
+[dependencies]
