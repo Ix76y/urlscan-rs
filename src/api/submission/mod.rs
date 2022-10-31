@@ -5,7 +5,7 @@ impl UrlScanClient {
         let request_url = format!("{}{}scan/", &self.domain, &self.endpoint);
     }
 
-    pub fn scan_urls(&self, urls: [&str]) {
+    pub fn scan_urls(&self, urls: Vec<String>) {
 
     }
 }
