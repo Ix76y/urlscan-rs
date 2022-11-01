@@ -6,14 +6,14 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Submission {
-    message: String,
-    uuid: String,
-    result: Url,
-    api: Url,
-    visibility: String,
-    options: HashMap<String, String>,
-    url: Url,
-    country: String,
+    pub message: String,
+    pub uuid: String,
+    pub result: Url,
+    pub api: Url,
+    pub visibility: String,
+    pub options: HashMap<String, String>,
+    pub url: Url,
+    pub country: String,
 }
 
 impl fmt::Display for Submission {

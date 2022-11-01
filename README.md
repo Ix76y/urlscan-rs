@@ -12,7 +12,7 @@ match response {
 }
 ```
 
-### Submitting a URL to be scanner:
+### Submitting a URL to be scanned:
 ```Rust
 let client = UrlScanClient::new(API_KEY);
 let response = client.scan_url("www.url-you-want-to-check.rust", "public", vec![]);
@@ -27,6 +27,19 @@ match response {
 Submission successful. 
 UUID: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 View Result: https://urlscan.io/result/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/
+```
+
+### Getting the DOM:
+```Rust
+let client = UrlScanClient::new(API_KEY);
+// submit a URL to get a "submission" back or directly add the UUID:
+let uuid = submission.uuid;
+
+let response = client.get_dom(uuid);
+match response {
+    Ok(dom) => println!("{}", dom),
+    _ => println!("There was an error, maybe scan is still running."),
+}
 ```
 
 ## FAQs
