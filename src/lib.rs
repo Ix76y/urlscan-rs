@@ -31,13 +31,14 @@ mod tests {
     use crate::UrlScanClient;
 
     static API_KEY: &str = "TODO";
+    static UUID: &str = "TODO";
 
     #[test]
     fn test_quota() {
         let client = UrlScanClient::new(API_KEY);
         let response = client.get_quota();
         match response {
-            Ok(quota) => println!("{}", quota),
+            Ok(quota) => println!("{:?}", quota),
             _ => println!("We got an error..."),
         }
     }
@@ -48,6 +49,16 @@ mod tests {
         let response = client.scan_url("barracudabyte.de", "public", vec![]);
         match response {
             Ok(submission) => println!("{}", submission),
+            _ => println!("We got an error..."),
+        }
+    }
+
+    #[test]
+    fn test_dom() {
+        let client = UrlScanClient::new(API_KEY);
+        let response = client.get_dom(UUID);
+        match response {
+            Ok(dom) => println!("{}", dom),
             _ => println!("We got an error..."),
         }
     }

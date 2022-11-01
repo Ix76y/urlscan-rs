@@ -18,6 +18,6 @@ pub struct Submission {
 
 impl fmt::Display for Submission {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        write!(f, "{}", self.message)
+        write!(f, "{}. \nUUID: {}\nView Result: {}", self.message, self.uuid, self.result)
     }
 }
