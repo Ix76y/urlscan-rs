@@ -33,24 +33,12 @@ mod tests {
     static API_KEY: &str = "TODO";
     static UUID: &str = "20d16cb9-72f1-4139-bd67-130e0bc02da8"; // crates.io scan
 
-    #[test]
-    fn test_quota() {
-        let client = UrlScanClient::new(API_KEY);
-        let response = client.get_quota();
-        match response {
-            Ok(quota) => println!("{:?}", quota),
-            _ => println!("We got an error..."),
-        }
-    }
 
     #[test]
-    fn test_submission() {
+    fn test_client() {
         let client = UrlScanClient::new(API_KEY);
-        let response = client.scan_url("barracudabyte.de", "public", vec![]);
-        match response {
-            Ok(submission) => println!("{}", submission),
-            _ => println!("We got an error..."),
-        }
+        assert_eq!(client.domain, "https://urlscan.io/");
+        assert_eq!(client.endpoint, "api/v1/");
     }
 
     #[test]
