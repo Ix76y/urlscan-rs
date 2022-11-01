@@ -30,13 +30,24 @@ impl UrlScanClient {
 mod tests {
     use crate::UrlScanClient;
 
+    static API_KEY: &str = "TODO";
+
     #[test]
     fn test_quota() {
-        let api_key = "TODO";
-        let client = UrlScanClient::new(api_key);
+        let client = UrlScanClient::new(API_KEY);
         let response = client.get_quota();
         match response {
             Ok(quota) => println!("{}", quota),
+            _ => println!("We got an error..."),
+        }
+    }
+
+    #[test]
+    fn test_submission() {
+        let client = UrlScanClient::new(API_KEY);
+        let response = client.scan_url("barracudabyte.de", "public", vec![]);
+        match response {
+            Ok(submission) => println!("{}", submission),
             _ => println!("We got an error..."),
         }
     }

@@ -1,5 +1,3 @@
-use reqwest::StatusCode;
-
 use serde_json::error::Category;
 use thiserror::Error;
 

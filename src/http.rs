@@ -1,7 +1,7 @@
 use reqwest::{blocking::{Client, Response}, StatusCode, header::HeaderMap};
 use serde::de::DeserializeOwned;
 
-use crate::{error::UrlScanError};
+use crate::error::UrlScanError;
 
 
 static DEFAULT_USER_AGENT: &str = "rust-client/urlscan+https://github.com/Ix76y/urlscan-rs";
