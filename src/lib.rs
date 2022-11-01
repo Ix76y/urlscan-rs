@@ -1,5 +1,6 @@
 pub mod api;
 mod http;
+mod error;
 
 #[derive(Clone)]
 pub struct UrlScanClient {
@@ -30,19 +31,13 @@ mod tests {
     use crate::UrlScanClient;
 
     #[test]
-    fn it_works() {
-        let result = 2 + 2;
-        assert_eq!(result, 4);
-    }
-
-    #[test]
     fn test_quota() {
-        let client = UrlScanClient::new("");
+        let api_key = "TODO";
+        let client = UrlScanClient::new(api_key);
         let response = client.get_quota();
         match response {
-            Ok(text) => println!("This is the response: {}", text),
+            Ok(quota) => println!("{}", quota),
             _ => println!("We got an error..."),
         }
-        
     }
 }

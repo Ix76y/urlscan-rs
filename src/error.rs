@@ -1,5 +1,6 @@
 use reqwest::StatusCode;
 
+use serde_json::error::Category;
 use thiserror::Error;
 
 #[derive(Debug, Error)]
@@ -16,5 +17,19 @@ pub enum UrlScanError {
     WrongCredentialsError,
     #[error("Unknown error.")]
     Unknown,
+    #[error("{0}")]
+    Io(#[from] std::io::Error),
+    #[error("{0}")]
+    Json(serde_json::Error),
+    #[error("{0}")]
+    Reqwest(#[from] reqwest::Error),
 }
 
+impl From<serde_json::Error> for UrlScanError {
+    fn from(err: serde_json::Error) -> UrlScanError {
+        match err.classify() {
+            Category::Io => UrlScanError::Io(err.into()),
+            Category::Syntax | Category::Data | Category::Eof => UrlScanError::Json(err),
+        }
+    }
+}
