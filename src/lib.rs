@@ -31,7 +31,7 @@ mod tests {
     use crate::UrlScanClient;
 
     static API_KEY: &str = "TODO";
-    static UUID: &str = "TODO";
+    static UUID: &str = "20d16cb9-72f1-4139-bd67-130e0bc02da8"; // crates.io scan
 
     #[test]
     fn test_quota() {
