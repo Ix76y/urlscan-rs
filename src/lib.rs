@@ -4,7 +4,7 @@
 //! This library supports the following tasks[^note]:
 //! - [x] Get Quota
 //! - [x] Submit URL to be scanned
-//! - [ ] Get Result of scan
+//! - [x] Get JSON Result of scan as String
 //! - [x] Get DOM of previously scanner URL by UUID
 //! - [ ] Get Screenshot of page
 //! - [ ] Search functionality
@@ -31,10 +31,12 @@
 //! 
 #![warn(missing_docs)]
 
+/// Public Module 'API' with submodules for 'quota', 'submission', and 'result'
 pub mod api;
 mod http;
 mod error;
 
+/// URLScanClient struct to hold information like API key, domain, and endpoint
 #[derive(Clone)]
 pub struct UrlScanClient {
     api_key: String,

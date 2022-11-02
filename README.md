@@ -9,7 +9,7 @@ Provides an abstraction over the URLScan.io API.
 This library supports the following tasks:
 - [x] Get Quota
 - [x] Submit URL to be scanned
-- [ ] Get Result of scan
+- [x] Get JSON Result of scan as String
 - [x] Get DOM of previously scanner URL by UUID
 - [ ] Get Screenshot of page
 - [ ] Search functionality
