@@ -1,4 +1,8 @@
 # urlscan-rs
+
+[![Build Status](https://github.com/Ix76y/urlscan-rs/actions/workflows/rust.yml/badge.svg)](https://github.com/Ix76y/urlscan-rs/actions/workflows/rust.yml)
+[![GitHub license](https://img.shields.io/github/license/Ix76y/urlscan-rs?style=for-the-badge)](https://github.com/Ix76y/urlscan-rs/blob/main/LICENSE)
+
 Rust wrapper for URLScan.io API
 
 ## Examples
