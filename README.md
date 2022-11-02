@@ -3,6 +3,7 @@
 ![Crates.io](https://img.shields.io/crates/v/urlscan?style=plastic)
 [![Build Status](https://github.com/Ix76y/urlscan-rs/actions/workflows/rust.yml/badge.svg)](https://github.com/Ix76y/urlscan-rs/actions/workflows/rust.yml)
 [![GitHub license](https://img.shields.io/github/license/Ix76y/urlscan-rs?style=plastic)](https://github.com/Ix76y/urlscan-rs/blob/main/LICENSE)
+![Release](https://img.shields.io/github/v/release/Ix76y/urlscan-rs?color=blue&include_prereleases&style=plastic)
 
 ## Rust wrapper for URLScan.io API
 
