@@ -6,7 +6,7 @@ use reqwest::header::{HeaderMap, HeaderValue};
 
 impl UrlScanClient {
     
-    pub fn scan_url(&self, url: &str, visibility: &str, tags: Vec<String>) -> Result<Submission, UrlScanError> {
+    pub fn scan_url(&self, url: &str, visibility: &str, _tags: Vec<String>) -> Result<Submission, UrlScanError> {
         let request_url = format!("{}{}scan/", &self.domain, &self.endpoint);
 
         let mut headers = HeaderMap::new();
