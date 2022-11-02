@@ -1,10 +1,8 @@
 use crate::UrlScanClient;
 use crate::error::UrlScanError;
-use crate::http::{get, get_plain};
+use crate::http::get_plain;
 
-pub mod model;
-
-use reqwest::header::{HeaderMap, HeaderValue};
+use reqwest::header::HeaderMap;
 
 
 impl UrlScanClient {
