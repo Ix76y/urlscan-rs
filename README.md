@@ -1,5 +1,6 @@
 # urlscan-rs
 
+![Crates.io](https://img.shields.io/crates/v/urlscan?style=plastic)
 [![Build Status](https://github.com/Ix76y/urlscan-rs/actions/workflows/rust.yml/badge.svg)](https://github.com/Ix76y/urlscan-rs/actions/workflows/rust.yml)
 [![GitHub license](https://img.shields.io/github/license/Ix76y/urlscan-rs?style=plastic)](https://github.com/Ix76y/urlscan-rs/blob/main/LICENSE)
 
