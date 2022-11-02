@@ -3,7 +3,17 @@
 [![Build Status](https://github.com/Ix76y/urlscan-rs/actions/workflows/rust.yml/badge.svg)](https://github.com/Ix76y/urlscan-rs/actions/workflows/rust.yml)
 [![GitHub license](https://img.shields.io/github/license/Ix76y/urlscan-rs?style=plastic)](https://github.com/Ix76y/urlscan-rs/blob/main/LICENSE)
 
-Rust wrapper for URLScan.io API
+## Rust wrapper for URLScan.io API
+
+Provides an abstraction over the URLScan.io API. 
+This library supports the following tasks:
+- [x] Get Quota
+- [x] Submit URL to be scanned
+- [ ] Get Result of scan
+- [x] Get DOM of previously scanner URL by UUID
+- [ ] Get Screenshot of page
+- [ ] Search functionality
+
 
 ## Examples
 ### Get your current quota with limits:
