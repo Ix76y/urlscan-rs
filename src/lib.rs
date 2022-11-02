@@ -83,4 +83,14 @@ mod tests {
             _ => println!("We got an error..."),
         }
     }
+
+    #[test]
+    fn test_result() {
+        let client = UrlScanClient::new(API_KEY);
+        let response = client.get_result(UUID);
+        match response {
+            Ok(result) => println!("{}", result),
+            _ => println!("Something went wrong :("),
+        }
+    }
 }
