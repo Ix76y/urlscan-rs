@@ -14,6 +14,8 @@ impl UrlScanClient {
     /// 
     /// ## Example usage
     /// ```rust
+    /// use urlscan::UrlScanClient;
+    /// 
     /// let client = UrlScanClient::new("YOUR-API-KEY-HERE");
     /// let response = client.get_quota();
     /// match response {

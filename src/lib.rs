@@ -18,6 +18,9 @@
 //! ## Examples
 //! Get your current quota with limits:
 //! ```rust
+//! // Imports
+//! use urlscan::UrlScanClient;
+//! 
 //! // Create a URlScan Client with you API key
 //! let client = UrlScanClient::new("YOUR-API-KEY-HERE");
 //! 
