@@ -1,3 +1,36 @@
+//! # URLScan.io REST API Wrapper.
+//!
+//! Provides an abstraction over the URLScan.io API. 
+//! This library supports the following tasks[^note]:
+//! - [x] Get Quota
+//! - [x] Submit URL to be scanned
+//! - [ ] Get Result of scan
+//! - [x] Get DOM of previously scanner URL by UUID
+//! - [ ] Get Screenshot of page
+//! - [ ] Search functionality
+//!
+//! [^note]: Tasks that are not marked as complete are currently being worked on and will be part of a future release.
+//! 
+//! ## API Key
+//! In order to use this library, you need an URLScan.io API key.
+//! To get an API key, create an URLScan.io account and then go to [Settings & API](https://urlscan.io/user/profile/) to get your API key.
+//! 
+//! ## Examples
+//! Get your current quota with limits:
+//! ```Rust
+//! // Create a URlScan Client with you API key
+//! let client = UrlScanClient::new("YOUR-API-KEY-HERE");
+//! 
+//! // Get the current quota for your API key
+//! let response = client.get_quota();
+//! match response {
+//!     Ok(quota) => println!("{}", quota),
+//!     _ => println!("We got an error..."),
+//! }
+//! ```
+//! 
+#![warn(missing_docs)]
+
 pub mod api;
 mod http;
 mod error;
