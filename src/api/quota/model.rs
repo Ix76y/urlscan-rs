@@ -2,9 +2,12 @@ use core::fmt;
 
 use serde::{Deserialize, Serialize};
 
+/// Quota struct contains the source and a limits object
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Quota {
+    /// Source of quota, usually 'user'
     pub source: String,
+    /// Limits contains all limits for a specified API key
     pub limits: Limits,
 }
 
@@ -37,20 +40,31 @@ pub struct Limits {
     pub query_visibility: Vec<String>,
 }
 
+/// Category struct contains information about daily, hourly, and minute limit
+/// where each of them is a Limit struct
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Category {
+    /// Daily limits
     pub day: Limit,
+    /// Hourly limits
     pub hour: Limit,
+    /// Limits per minute
     pub minute: Limit, 
 }
 
+/// Limit struct contains the current limit, how much of it was used so far and how much of it is remaining.
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Limit {
+    /// Limit for a specific category
     pub limit: u32,
+    /// How much requests have been already used
     pub used: u32,
+    /// How many requests are remanining
     pub remaining: u32,
+    /// Precentage of used/limit
     pub percent: f32,
 }
+
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Liveshot {

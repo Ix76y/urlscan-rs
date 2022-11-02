@@ -1,6 +1,7 @@
 use crate::UrlScanClient;
 use crate::error::UrlScanError;
 
+/// Quota model contains the struct for quota
 pub mod model;
 pub use model::Quota;
 
@@ -9,6 +10,17 @@ use reqwest::header::{HeaderMap, HeaderValue};
 use crate::http::get;
 
 impl UrlScanClient {
+    /// Get your current quota to check your limits and the amount of requests you already made
+    /// 
+    /// ## Example usage
+    /// ```Rust
+    /// let client = UrlScanClient::new("YOUR-API-KEY-HERE");
+    /// let response = client.get_quota();
+    /// match response {
+    ///     Ok(quota) => println!("{}", quota),
+    ///     _ => println!("We got an error..."),
+    /// }
+    /// ```
     pub fn get_quota(&self) -> Result<Quota, UrlScanError> {
         let url = format!("{}user/quotas/", &self.domain);
         let mut headers = HeaderMap::new();

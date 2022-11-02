@@ -29,6 +29,9 @@
 //! }
 //! ```
 //! 
+//! ## URLScan.io Documentation
+//! [URLScan.io API Documentation](https://urlscan.io/docs/api/)
+//! 
 #![warn(missing_docs)]
 
 /// Public Module 'API' with submodules for 'quota', 'submission', and 'result'

@@ -1,11 +1,14 @@
 use crate::{UrlScanClient, error::UrlScanError, http::post};
 
+/// Submission model containing information about the successfull submission
 pub mod model;
 pub use model::Submission;
 use reqwest::header::{HeaderMap, HeaderValue};
 
 impl UrlScanClient {
-    
+    /// Scans a given URL with a specific visibility.
+    /// The URLScan.io API has different request limits of visibility, more for public scans then for private ones.
+    /// However, for security researchers it is recommend to use a private visibility when investigating potentially malicious URLs.
     pub fn scan_url(&self, url: &str, visibility: &str, _tags: Vec<String>) -> Result<Submission, UrlScanError> {
         let request_url = format!("{}{}scan/", &self.domain, &self.endpoint);
 
