@@ -13,7 +13,7 @@ impl UrlScanClient {
     /// Get your current quota to check your limits and the amount of requests you already made
     /// 
     /// ## Example usage
-    /// ```Rust
+    /// ```rust
     /// let client = UrlScanClient::new("YOUR-API-KEY-HERE");
     /// let response = client.get_quota();
     /// match response {

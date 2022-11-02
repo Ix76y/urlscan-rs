@@ -17,7 +17,7 @@ This library supports the following tasks:
 
 ## Examples
 ### Get your current quota with limits:
-```Rust
+```rust
 let client = UrlScanClient::new("YOUR-API-KEY-HERE");
 let response = client.get_quota();
 match response {
@@ -27,7 +27,7 @@ match response {
 ```
 
 ### Submitting a URL to be scanned:
-```Rust
+```rust
 let client = UrlScanClient::new(API_KEY);
 let response = client.scan_url("www.url-you-want-to-check.rust", "public", vec![]);
 match response {
@@ -44,7 +44,7 @@ View Result: https://urlscan.io/result/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/
 ```
 
 ### Getting the DOM:
-```Rust
+```rust
 let client = UrlScanClient::new(API_KEY);
 // submit a URL to get a "submission" back or directly add the UUID:
 let uuid = submission.uuid;
