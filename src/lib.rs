@@ -69,6 +69,7 @@ impl UrlScanClient {
 
 #[cfg(test)]
 mod tests {
+    // use std::path::Path;
     use crate::UrlScanClient;
 
     static API_KEY: &str = "TODO";
@@ -99,6 +100,19 @@ mod tests {
         match response {
             Ok(result) => println!("{}", result),
             _ => println!("Something went wrong :("),
+        }
+    }
+
+    #[test]
+    fn test_screenshot() {
+        let client: UrlScanClient = UrlScanClient::new(API_KEY);
+        let response = client.get_screenshot(UUID);
+        match response {
+            Ok(result) => {
+                println!("All good?");
+                _ = client.save_screenshot(result, "../urlscan.png");
+            },
+            _ => println!("Didn't get the screenshot :("),
         }
     }
 }

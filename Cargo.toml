@@ -1,6 +1,6 @@
 [package]
 name = "urlscan"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["Ix76y <TroubledWaffle@protonmail.com>"]
 description = "URLScan.io API"
 keywords = ["urlscan", "api"]
@@ -19,6 +19,8 @@ url = { version = "2", features = ["serde"] }
 serde_json = "1.0.87"
 thiserror = "1.0.37"
 libflate = "1.2.0"
+image = "0.24.6"
+bytes = "1.4.0"
 
 
 [lib]
