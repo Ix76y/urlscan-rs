@@ -13,7 +13,7 @@ This library supports the following tasks:
 - [x] Submit URL to be scanned
 - [x] Get JSON Result of scan as String
 - [x] Get DOM of previously scanner URL by UUID
-- [ ] Get Screenshot of page
+- [x] Get Screenshot of page
 - [ ] Search functionality
 
 
