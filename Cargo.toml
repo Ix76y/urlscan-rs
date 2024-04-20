@@ -1,6 +1,6 @@
 [package]
 name = "urlscan"
-version = "0.2.0"
+version = "0.3.0"
 authors = ["Ix76y <TroubledWaffle@protonmail.com>"]
 description = "URLScan.io API"
 keywords = ["urlscan", "api"]
