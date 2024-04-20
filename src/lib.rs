@@ -6,8 +6,8 @@
 //! - [x] Submit URL to be scanned
 //! - [x] Get JSON Result of scan as String
 //! - [x] Get DOM of previously scanner URL by UUID
-//! - [ ] Get Screenshot of page
-//! - [ ] Search functionality
+//! - [x] Get Screenshot of page
+//! - [x] Search functionality
 //!
 //! [^note]: Tasks that are not marked as complete are currently being worked on and will be part of a future release.
 //! 

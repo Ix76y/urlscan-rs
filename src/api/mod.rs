@@ -4,3 +4,5 @@ pub mod quota;
 pub mod submission;
 /// Result module to receive DOM, Screenshot, and/or general result information from scan
 pub mod result;
+/// Search module to search previously submitted scans
+pub mod search;
