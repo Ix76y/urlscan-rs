@@ -14,7 +14,7 @@ This library supports the following tasks:
 - [x] Get JSON Result of scan as String
 - [x] Get DOM of previously scanner URL by UUID
 - [x] Get Screenshot of page
-- [ ] Search functionality
+- [x] Search functionality
 
 
 ## Examples
@@ -55,6 +55,16 @@ let response = client.get_dom(uuid);
 match response {
     Ok(dom) => println!("{}", dom),
     _ => println!("There was an error, maybe scan is still running."),
+}
+```
+
+### Searching Scans:
+```rust
+let client = UrlScanClient::new(API_KEY);
+let response = client.search_scans("domain:urlscan.io", Some(2));
+match response {
+    Ok(result) => println!("{}", result),
+    _ => println!("Something went wrong :("),
 }
 ```
 
